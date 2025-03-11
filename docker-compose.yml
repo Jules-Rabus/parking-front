@@ -1,0 +1,15 @@
+services:
+  app-dev:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    image: ${COMPOSE_PROJECT_NAME:-parking-front}:${IMAGE_TAG:-latest}
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
