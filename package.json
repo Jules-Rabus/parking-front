@@ -8,8 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "prettier:format": "prettier --write .",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "vitest:test": "vitest run",
-    "vitest:watch": "vitest"
+    "vitest:watch": "vitest",
+    "test:e2e": "npm run build && npm run cypress:run"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,json}": [
@@ -33,6 +36,7 @@
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
