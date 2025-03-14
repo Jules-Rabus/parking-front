@@ -12,6 +12,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom', // Simulates a browser environment
     globals: true,
-    setupFiles: './src/test/setup.ts',
+    setupFiles: './src/tests/unit/setup.ts',
   },
 });
